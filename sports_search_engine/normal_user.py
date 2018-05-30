@@ -19,12 +19,12 @@ while choice:
       player_input = input("Player? ")
       rows = db.query("SELECT * FROM clemson_stats_db WHERE player = :data ;", data = player_input)
       for row in rows:
-          print(rows)
+          print(row)
     elif choice == "2":
       player_input = input("Rank? ")
       rows = db.query("SELECT * FROM clemson_stats_db WHERE rk = :data ;", data = player_input)
       for row in rows:
-          print(rows)
+          print(row)
     elif choice == "3":
         new_rank = input("Rank? > ")
         new_player = input("Player? > ")
@@ -41,7 +41,7 @@ while choice:
                 rush_tds = new_rush_tds
                 )
         for row in rows:
-            print(rows)
+            print(row)
     elif choice == "4":
         print("\n   GO TIGERS!")
         choice = False
